@@ -2,4 +2,4 @@
 
 _origin=devel
 
-git push origin _origin
+git push origin $_origin
