@@ -1,5 +1,6 @@
 #!/bin/bash
 
-branch=git rev-parse --abbrev-ref HEAD
+branch=$(git rev-parse --abbrev-ref HEAD)
+echo $branch
 git push origin $branch
 
