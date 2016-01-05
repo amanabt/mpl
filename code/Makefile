@@ -1,7 +1,7 @@
 top_builddir = ..
 include ${top_builddir}/makeinclude
 
-DIRS = utility sorting
+DIRS = utility library
 
 all:
 	for dir in ${DIRS}; do \
@@ -13,9 +13,9 @@ install:
 		${MAKE} -C $${dir} install; \
 	done
 
-# install_stl:
-# 	mkdir -p $(INSTALL_INCLUDE_DIR)
-# 	cp -r ./stl $(INSTALL_INCLUDE_DIR)
+install_stl:
+	mkdir -p $(INSTALL_INCLUDE_DIR)
+	cp -r ./stl $(INSTALL_INCLUDE_DIR)
 
 clean:
 	for dir in ${DIRS}; do \

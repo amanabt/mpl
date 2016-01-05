@@ -38,6 +38,7 @@ doc:
 clean:
 	${RM} *~
 	${RM} doc
+	${RM} main
 	${MAKE} -C code clean
 
 .PHONY: all lib install install_lib doc clean

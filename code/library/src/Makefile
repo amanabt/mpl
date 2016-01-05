@@ -1,8 +1,8 @@
 top_builddir = ../../..
 include ${top_builddir}/makeinclude
 
-CPP_SRC = insertion.cxx
-
+CPP_SRC = insertion.cxx \
+	  fibonacci.cxx
 DEP  = ${CPP_SRC:%.cxx=%.dep}
 OBJ  = ${CPP_SRC:%.cxx=%.o}
 LOBJ = ${CPP_SRC:%.cxx=%.lo}
@@ -15,15 +15,15 @@ dep: $(DEP)
 
 obj: $(LOBJ)
 
-lib: libsorting.la libMPLC++.a
+lib: liblibrary.la libMPLC++.a
 
-libsorting.la: $(LOBJ)
+liblibrary.la: $(LOBJ)
 	$(LINK) $(LOBJ) -o $@
 
 libMPLC++.a:
 	$(LINK) $(LIBS) -o $@
 
 clean:
-	$(RM) $(DEP) $(OBJ) $(LOBJ) libsorting.la libMPLC++.a .libs *~
+	$(RM) $(DEP) $(OBJ) $(LOBJ) liblibrary.la libMPLC++.a .libs *~
 
 .PHONY: dep obj lib clean

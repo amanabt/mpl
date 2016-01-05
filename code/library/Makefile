@@ -7,8 +7,8 @@ all:
 	${MAKE} -C src lib
 
 install: all
-	mkdir -p $(INSTALL_INCLUDE_DIR)/sorting
-	cp -r ./include $(INSTALL_INCLUDE_DIR)/sorting
+	mkdir -p $(INSTALL_INCLUDE_DIR)/library
+	cp -r ./include $(INSTALL_INCLUDE_DIR)/library
 
 	mkdir -p $(INSTALL_LIB_DIR)
 	cp -r ./src/libMPLC++.a $(INSTALL_LIB_DIR)

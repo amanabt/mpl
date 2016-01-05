@@ -1,6 +1,6 @@
-MFLAGS = -Wall -static -O3 -std=c++11 -M -MT $(basename $<).lo
-CFLAGS = -Wall -static -O3 -std=c++11 -c
-LFLAGS = -Wall -static -O3 -std=c++11
+MFLAGS = -Wall -static -O3 -std=c++14 -M -MT $(basename $<).lo
+CFLAGS = -Wall -static -O3 -std=c++14 -c
+LFLAGS = -Wall -static -O3 -std=c++14
 
 DEPGEN  = g++ $(MFLAGS)
 COMPILE = libtool --mode=compile g++ $(CFLAGS)
@@ -8,7 +8,7 @@ LINK    = libtool --mode=link g++ $(LFLAGS)
 
 LIBS = \
 	$(top_builddir)/code/utility/src/libutility.la \
-	$(top_builddir)/code/sorting/src/libsorting.la
+	$(top_builddir)/code/library/src/liblibrary.la \
 
 FLUID = fluid
 RM    = rm -rfv
