@@ -2,7 +2,9 @@ top_builddir = ../../..
 include ${top_builddir}/makeinclude
 
 CPP_SRC = insertion.cxx \
-	  fibonacci.cxx
+	  fibonacci.cxx \
+	  test.cxx
+
 DEP  = ${CPP_SRC:%.cxx=%.dep}
 OBJ  = ${CPP_SRC:%.cxx=%.o}
 LOBJ = ${CPP_SRC:%.cxx=%.lo}

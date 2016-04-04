@@ -8,7 +8,7 @@ all:
 lib:
 	${MAKE} -C code all
 
-install: install_lib
+install: uninstall install_lib
 
 install_lib: lib
 	${MAKE} -C code install
@@ -34,6 +34,9 @@ uninstall:
 
 doc:
 	doxygen doxy.conf
+
+compile:
+	g++ -std=c++14 -Wall -O3 main.cxx -o main.o -L/usr/local/lib64 -lMPLC++
 
 clean:
 	${RM} *~

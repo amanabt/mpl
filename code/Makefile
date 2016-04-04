@@ -8,7 +8,8 @@ all:
 		${MAKE} -C $${dir} all; \
 	done
 
-install:
+install: \
+	install_stl
 	for dir in ${DIRS}; do \
 		${MAKE} -C $${dir} install; \
 	done
